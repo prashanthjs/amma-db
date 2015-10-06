@@ -1,0 +1,38 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "commonjs",
+        "sourceMap": false,
+        "declaration": true,
+        "noImplicitAny": false,
+        "removeComments": false,
+        "noLib": false
+    },
+    "filesGlob": [
+        "*.ts",
+        "services/**/*.ts",
+        "[!node_modules]/**/*.ts",
+        "typings/**/*.ts"
+    ],
+    "files": [
+        "amma-db.d.ts",
+        "index.d.ts",
+        "index.ts",
+        "missing.d.ts",
+        "services/db.d.ts",
+        "services/db.ts",
+        "typings/bluebird/bluebird.d.ts",
+        "typings/del/del.d.ts",
+        "typings/glob/glob.d.ts",
+        "typings/gulp-nodemon/gulp-nodemon.d.ts",
+        "typings/gulp/gulp.d.ts",
+        "typings/hapi/hapi.d.ts",
+        "typings/minimatch/minimatch.d.ts",
+        "typings/mongoose/mongoose.d.ts",
+        "typings/node/node.d.ts",
+        "typings/orchestrator/orchestrator.d.ts",
+        "typings/q/Q.d.ts",
+        "typings/sinon/sinon.d.ts",
+        "typings/tsd.d.ts"
+    ]
+}

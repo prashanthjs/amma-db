@@ -1,0 +1,42 @@
+{
+  "name": "amma-db",
+  "version": "0.0.1",
+  "description": "amma db config",
+  "main": "index.js",
+  "author": "Prashanth Pratapagiri <prashanth.p@outlook.com>",
+  "license": "MIT",
+  "keywords": [
+    "hapi",
+    "node",
+    "amma",
+    "amma-db"
+  ],
+  "typescript": {
+    "definition": "amma-db.d.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prashanthjs/amma-db.git"
+  },
+  "bugs": {
+    "url": "https://github.com/prashanthjs/amma-db/issues"
+  },
+  "scripts": {
+    "test": "lab -t 100 test/unit-testing/services/db.test.js -v -C"
+  },
+  "dependencies": {
+    "hapi": "^8.8.0",
+    "mongoose": "^4.0.7",
+    "amma-plugin-loader": "git://git@github.com:prashanthjs/amma-plugin-loader.git"
+  },
+  "devDependencies": {
+    "code": "^1.4.1",
+    "del": "^1.2.0",
+    "gulp": "^3.8.11",
+    "gulp-lab": "^1.0.5",
+    "gulp-nodemon": "^2.0.3",
+    "lab": "^5.8.0",
+    "sinon": "^1.15.4",
+    "tsd": "^0.6.3"
+  }
+}
