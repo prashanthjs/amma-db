@@ -1,7 +1,7 @@
 {
   "name": "amma-db",
   "version": "0.0.1",
-  "description": "amma db config",
+  "description": "amma db",
   "main": "index.js",
   "author": "Prashanth Pratapagiri <prashanth.p@outlook.com>",
   "license": "MIT",
@@ -22,10 +22,10 @@
     "url": "https://github.com/prashanthjs/amma-db/issues"
   },
   "scripts": {
-    "test": "lab -t 100 test/unit-testing/services/db.test.js -v -C"
+    "test": "lab -t 100 -v -C"
   },
   "dependencies": {
-    "hapi": "^8.8.0",
+    "hapi": "^10.4.1",
     "mongoose": "^4.0.7",
     "amma-plugin-loader": "git://git@github.com:prashanthjs/amma-plugin-loader.git"
   },
