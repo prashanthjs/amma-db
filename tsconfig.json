@@ -3,7 +3,7 @@
         "target": "es5",
         "module": "commonjs",
         "sourceMap": false,
-        "declaration": true,
+        "declaration": false,
         "noImplicitAny": false,
         "removeComments": false,
         "noLib": false
@@ -16,15 +16,13 @@
         "typings/**/*.ts"
     ],
     "files": [
-        "amma-db.d.ts",
-        "index.d.ts",
         "index.ts",
-        "services/db.d.ts",
         "services/db.ts",
-        "test/unit-testing/services/db.test.d.ts",
         "test/unit-testing/services/db.test.ts",
+        "typings/amma-plugin-loader/amma-plugin-loader.d.ts",
         "typings/bluebird/bluebird.d.ts",
         "typings/del/del.d.ts",
+        "typings/es6-promise/es6-promise.d.ts",
         "typings/glob/glob.d.ts",
         "typings/gulp-nodemon/gulp-nodemon.d.ts",
         "typings/gulp/gulp.d.ts",
@@ -35,7 +33,7 @@
         "typings/node/node.d.ts",
         "typings/orchestrator/orchestrator.d.ts",
         "typings/q/Q.d.ts",
-        "typings/sinon/sinon.d.ts",
-        "typings/tsd.d.ts"
-    ]
+        "typings/sinon/sinon.d.ts"
+    ],
+    "exclude": []
 }

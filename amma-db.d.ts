@@ -1,50 +1,32 @@
+declare module 'amma-db/index' {
+	import Plugin = require('amma-plugin-loader'); let plugin: Plugin.IPluginLoader;
+	export = plugin;
 
-declare module "amma-db/index"{
-    import tmp = require('index');
-    export = tmp;
 }
+declare module 'amma-db/services/db' {
+	import Hapi = require("hapi");
+	export interface IOptions {
+	    db: {
+	        uri: string;
+	        options?: Object;
+	    };
+	}
+	export interface IDb {
+	    server: Hapi.Server;
+	    getOptions(): IOptions;
+	    connectDb(next: (err?: any, result?: any) => any): any;
+	    disconnectDb(next: (err?: any, result?: any) => any): any;
+	}
+	export default class Db implements IDb {
+	    server: Hapi.Server;
+	    constructor(server: Hapi.Server);
+	    getOptions(): IOptions;
+	    connectDb(next: (err?: any, result?: any) => any): any;
+	    disconnectDb(next: (err?: any, result?: any) => any): any;
+	}
 
-declare module "amma-db/services/db"{
-    import tmp = require('services/db');
-    export = tmp;
 }
-
-declare module "amma-db/test/unit-testing/services/db.test"{
-    import tmp = require('test/unit-testing/services/db.test');
-    export = tmp;
-}
-
-declare module "amma-db/node_modules/amma-plugin-loader/index"{
-    import tmp = require('node_modules/amma-plugin-loader/index');
-    export = tmp;
-}
-
-declare module "amma-db/node_modules/amma-plugin-loader/test/unit-testing/index.test"{
-    import tmp = require('node_modules/amma-plugin-loader/test/unit-testing/index.test');
-    export = tmp;
-}
-
-declare module "amma-db/node_modules/amma-plugin-loader/test/unit-testing/test-sample-module/controller"{
-    import tmp = require('node_modules/amma-plugin-loader/test/unit-testing/test-sample-module/controller');
-    export = tmp;
-}
-
-declare module "amma-db/node_modules/amma-plugin-loader/test/unit-testing/test-sample-module/failure-run"{
-    import tmp = require('node_modules/amma-plugin-loader/test/unit-testing/test-sample-module/failure-run');
-    export = tmp;
-}
-
-declare module "amma-db/node_modules/amma-plugin-loader/test/unit-testing/test-sample-module/index"{
-    import tmp = require('node_modules/amma-plugin-loader/test/unit-testing/test-sample-module/index');
-    export = tmp;
-}
-
-declare module "amma-db/node_modules/amma-plugin-loader/test/unit-testing/test-sample-module/success-run"{
-    import tmp = require('node_modules/amma-plugin-loader/test/unit-testing/test-sample-module/success-run');
-    export = tmp;
-}
-
-declare module "amma-db"{
-    import tmp = require('index');
-    export = tmp;
+declare module 'amma-db' {
+	import main = require('amma-db/index');
+	export = main;
 }
